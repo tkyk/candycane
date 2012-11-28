@@ -1,0 +1,58 @@
+# setting worker_processes to CPU core count
+worker_processes      1;
+daemon off;
+
+events {
+  worker_connections  1024;
+}
+
+http {
+  include             mime.types;
+  default_type        application/octet-stream;
+  sendfile            on;
+  server_tokens       off;
+  keepalive_timeout   65;
+  gzip                on;
+  access_log          off;
+  proxy_max_temp_file_size	0;
+  #fastcgi_max_temp_file_size	0;
+  limit_conn_zone $binary_remote_addr zone=phplimit:1m; # define a limit bucket for PHP-FPM
+
+  upstream php_fpm {
+    server unix:/tmp/php-fpm.socket;
+  }
+
+  server {
+    listen            <%= ENV['PORT'] %>;
+    server_name       _;
+
+    root              /app/app/webroot/;
+    index             index.php index.html index.htm;
+
+    # Deny hidden files (.htaccess, .htpasswd, .DS_Store).
+    location ~ /\. {
+      deny            all;
+      access_log      off;
+      log_not_found   off;
+    }
+
+    location / {
+      if (-f $request_filename) {
+        break;
+      }
+      if (-d $request_filename) {
+        break;
+      }
+      rewrite         ^(.+)$ /index.php last;
+    }
+
+    location ~ .*\.php$ {
+      try_files $uri =404;
+      limit_conn phplimit 5; # limit to 5 concurrent users to PHP per IP.
+      include         /app/vendor/nginx/conf/fastcgi_params;
+      fastcgi_param   HTTPS on; # force SSL
+      fastcgi_pass    php_fpm;
+      fastcgi_param   SCRIPT_FILENAME $document_root$fastcgi_script_name;
+    }
+  }
+}
