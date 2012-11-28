@@ -1,7 +1,6 @@
 ## Configuration and Temporary files
 app/tmp/*
 app/files/*
-app/Config/database.php
 app/Config/email.php
 
 ## Simpletest
