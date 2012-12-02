@@ -15,7 +15,7 @@ CREATE TABLE attachments (
 );
 
 
-ALTER TABLE public.attachments OWNER TO pgadmin;
+
 
 
 CREATE SEQUENCE attachments_id_seq
@@ -26,7 +26,7 @@ CREATE SEQUENCE attachments_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.attachments_id_seq OWNER TO pgadmin;
+
 
 ALTER SEQUENCE attachments_id_seq OWNED BY attachments.id;
 
@@ -50,7 +50,7 @@ CREATE TABLE auth_sources (
 );
 
 
-ALTER TABLE public.auth_sources OWNER TO pgadmin;
+
 
 CREATE SEQUENCE auth_sources_id_seq
     START WITH 1
@@ -60,7 +60,7 @@ CREATE SEQUENCE auth_sources_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.auth_sources_id_seq OWNER TO pgadmin;
+
 
 ALTER SEQUENCE auth_sources_id_seq OWNED BY auth_sources.id;
 
@@ -78,7 +78,7 @@ CREATE TABLE boards (
 );
 
 
-ALTER TABLE public.boards OWNER TO pgadmin;
+
 
 CREATE SEQUENCE boards_id_seq
     START WITH 1
@@ -88,7 +88,7 @@ CREATE SEQUENCE boards_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.boards_id_seq OWNER TO pgadmin;
+
 
 ALTER SEQUENCE boards_id_seq OWNED BY boards.id;
 
@@ -106,7 +106,7 @@ CREATE TABLE changes (
 );
 
 
-ALTER TABLE public.changes OWNER TO pgadmin;
+
 
 CREATE SEQUENCE changes_id_seq
     START WITH 1
@@ -116,7 +116,7 @@ CREATE SEQUENCE changes_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.changes_id_seq OWNER TO pgadmin;
+
 
 ALTER SEQUENCE changes_id_seq OWNED BY changes.id;
 
@@ -135,7 +135,7 @@ CREATE TABLE changesets (
 );
 
 
-ALTER TABLE public.changesets OWNER TO pgadmin;
+
 
 CREATE SEQUENCE changesets_id_seq
     START WITH 1
@@ -145,7 +145,7 @@ CREATE SEQUENCE changesets_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.changesets_id_seq OWNER TO pgadmin;
+
 
 ALTER SEQUENCE changesets_id_seq OWNED BY changesets.id;
 
@@ -157,7 +157,7 @@ CREATE TABLE changesets_issues (
 );
 
 
-ALTER TABLE public.changesets_issues OWNER TO pgadmin;
+
 
 CREATE SEQUENCE changesets_issues_changeset_id_seq
     START WITH 1
@@ -167,7 +167,7 @@ CREATE SEQUENCE changesets_issues_changeset_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.changesets_issues_changeset_id_seq OWNER TO pgadmin;
+
 
 ALTER SEQUENCE changesets_issues_changeset_id_seq OWNED BY changesets_issues.changeset_id;
 
@@ -181,7 +181,7 @@ CREATE SEQUENCE changesets_issues_issue_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.changesets_issues_issue_id_seq OWNER TO pgadmin;
+
 
 ALTER SEQUENCE changesets_issues_issue_id_seq OWNED BY changesets_issues.issue_id;
 
@@ -198,7 +198,7 @@ CREATE TABLE comments (
 );
 
 
-ALTER TABLE public.comments OWNER TO pgadmin;
+
 
 CREATE SEQUENCE comments_id_seq
     START WITH 1
@@ -208,7 +208,7 @@ CREATE SEQUENCE comments_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.comments_id_seq OWNER TO pgadmin;
+
 
 ALTER SEQUENCE comments_id_seq OWNED BY comments.id;
 
@@ -232,7 +232,7 @@ CREATE TABLE custom_fields (
 );
 
 
-ALTER TABLE public.custom_fields OWNER TO pgadmin;
+
 
 CREATE SEQUENCE custom_fields_id_seq
     START WITH 1
@@ -242,7 +242,7 @@ CREATE SEQUENCE custom_fields_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.custom_fields_id_seq OWNER TO pgadmin;
+
 
 ALTER SEQUENCE custom_fields_id_seq OWNED BY custom_fields.id;
 
@@ -254,7 +254,7 @@ CREATE TABLE custom_fields_projects (
 );
 
 
-ALTER TABLE public.custom_fields_projects OWNER TO pgadmin;
+
 
 CREATE TABLE custom_fields_trackers (
     custom_field_id integer DEFAULT 0 NOT NULL,
@@ -262,7 +262,7 @@ CREATE TABLE custom_fields_trackers (
 );
 
 
-ALTER TABLE public.custom_fields_trackers OWNER TO pgadmin;
+
 
 CREATE TABLE custom_values (
     id integer NOT NULL,
@@ -273,7 +273,7 @@ CREATE TABLE custom_values (
 );
 
 
-ALTER TABLE public.custom_values OWNER TO pgadmin;
+
 
 CREATE SEQUENCE custom_values_id_seq
     START WITH 1
@@ -283,7 +283,7 @@ CREATE SEQUENCE custom_values_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.custom_values_id_seq OWNER TO pgadmin;
+
 
 ALTER SEQUENCE custom_values_id_seq OWNED BY custom_values.id;
 
@@ -299,7 +299,7 @@ CREATE TABLE documents (
 );
 
 
-ALTER TABLE public.documents OWNER TO pgadmin;
+
 
 CREATE SEQUENCE documents_id_seq
     START WITH 1
@@ -309,7 +309,7 @@ CREATE SEQUENCE documents_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.documents_id_seq OWNER TO pgadmin;
+
 
 ALTER SEQUENCE documents_id_seq OWNED BY documents.id;
 
@@ -322,7 +322,7 @@ CREATE TABLE enabled_modules (
 );
 
 
-ALTER TABLE public.enabled_modules OWNER TO pgadmin;
+
 
 CREATE SEQUENCE enabled_modules_id_seq
     START WITH 1
@@ -332,7 +332,7 @@ CREATE SEQUENCE enabled_modules_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.enabled_modules_id_seq OWNER TO pgadmin;
+
 
 ALTER SEQUENCE enabled_modules_id_seq OWNED BY enabled_modules.id;
 
@@ -347,7 +347,7 @@ CREATE TABLE enumerations (
 );
 
 
-ALTER TABLE public.enumerations OWNER TO pgadmin;
+
 
 CREATE SEQUENCE enumerations_id_seq
     START WITH 1
@@ -357,7 +357,7 @@ CREATE SEQUENCE enumerations_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.enumerations_id_seq OWNER TO pgadmin;
+
 
 ALTER SEQUENCE enumerations_id_seq OWNED BY enumerations.id;
 
@@ -371,7 +371,7 @@ CREATE TABLE issue_categories (
 );
 
 
-ALTER TABLE public.issue_categories OWNER TO pgadmin;
+
 
 CREATE SEQUENCE issue_categories_id_seq
     START WITH 1
@@ -381,7 +381,7 @@ CREATE SEQUENCE issue_categories_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.issue_categories_id_seq OWNER TO pgadmin;
+
 
 ALTER SEQUENCE issue_categories_id_seq OWNED BY issue_categories.id;
 
@@ -396,7 +396,7 @@ CREATE TABLE issue_relations (
 );
 
 
-ALTER TABLE public.issue_relations OWNER TO pgadmin;
+
 
 CREATE SEQUENCE issue_relations_id_seq
     START WITH 1
@@ -406,7 +406,7 @@ CREATE SEQUENCE issue_relations_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.issue_relations_id_seq OWNER TO pgadmin;
+
 
 ALTER SEQUENCE issue_relations_id_seq OWNED BY issue_relations.id;
 
@@ -421,7 +421,7 @@ CREATE TABLE issue_statuses (
 );
 
 
-ALTER TABLE public.issue_statuses OWNER TO pgadmin;
+
 
 CREATE SEQUENCE issue_statuses_id_seq
     START WITH 1
@@ -431,7 +431,7 @@ CREATE SEQUENCE issue_statuses_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.issue_statuses_id_seq OWNER TO pgadmin;
+
 
 ALTER SEQUENCE issue_statuses_id_seq OWNED BY issue_statuses.id;
 
@@ -459,7 +459,7 @@ CREATE TABLE issues (
 );
 
 
-ALTER TABLE public.issues OWNER TO pgadmin;
+
 
 CREATE SEQUENCE issues_id_seq
     START WITH 1
@@ -469,7 +469,7 @@ CREATE SEQUENCE issues_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.issues_id_seq OWNER TO pgadmin;
+
 
 ALTER SEQUENCE issues_id_seq OWNED BY issues.id;
 
@@ -485,7 +485,7 @@ CREATE TABLE journal_details (
 );
 
 
-ALTER TABLE public.journal_details OWNER TO pgadmin;
+
 
 CREATE SEQUENCE journal_details_id_seq
     START WITH 1
@@ -495,7 +495,7 @@ CREATE SEQUENCE journal_details_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.journal_details_id_seq OWNER TO pgadmin;
+
 
 ALTER SEQUENCE journal_details_id_seq OWNED BY journal_details.id;
 
@@ -511,7 +511,7 @@ CREATE TABLE journals (
 );
 
 
-ALTER TABLE public.journals OWNER TO pgadmin;
+
 
 CREATE SEQUENCE journals_id_seq
     START WITH 1
@@ -521,7 +521,7 @@ CREATE SEQUENCE journals_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.journals_id_seq OWNER TO pgadmin;
+
 
 ALTER SEQUENCE journals_id_seq OWNED BY journals.id;
 
@@ -537,7 +537,7 @@ CREATE TABLE members (
 );
 
 
-ALTER TABLE public.members OWNER TO pgadmin;
+
 
 CREATE SEQUENCE members_id_seq
     START WITH 1
@@ -547,7 +547,7 @@ CREATE SEQUENCE members_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.members_id_seq OWNER TO pgadmin;
+
 
 ALTER SEQUENCE members_id_seq OWNED BY members.id;
 
@@ -565,7 +565,7 @@ CREATE TABLE news (
 );
 
 
-ALTER TABLE public.news OWNER TO pgadmin;
+
 
 CREATE SEQUENCE news_id_seq
     START WITH 1
@@ -575,7 +575,7 @@ CREATE SEQUENCE news_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.news_id_seq OWNER TO pgadmin;
+
 
 ALTER SEQUENCE news_id_seq OWNED BY news.id;
 
@@ -596,7 +596,7 @@ CREATE TABLE projects (
 );
 
 
-ALTER TABLE public.projects OWNER TO pgadmin;
+
 
 CREATE SEQUENCE projects_id_seq
     START WITH 1
@@ -606,7 +606,7 @@ CREATE SEQUENCE projects_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.projects_id_seq OWNER TO pgadmin;
+
 
 ALTER SEQUENCE projects_id_seq OWNED BY projects.id;
 
@@ -618,7 +618,7 @@ CREATE TABLE projects_trackers (
 );
 
 
-ALTER TABLE public.projects_trackers OWNER TO pgadmin;
+
 
 CREATE SEQUENCE projects_trackers_project_id_seq
     START WITH 1
@@ -628,7 +628,7 @@ CREATE SEQUENCE projects_trackers_project_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.projects_trackers_project_id_seq OWNER TO pgadmin;
+
 
 ALTER SEQUENCE projects_trackers_project_id_seq OWNED BY projects_trackers.project_id;
 
@@ -645,7 +645,7 @@ CREATE TABLE queries (
 );
 
 
-ALTER TABLE public.queries OWNER TO pgadmin;
+
 
 CREATE SEQUENCE queries_id_seq
     START WITH 1
@@ -655,7 +655,7 @@ CREATE SEQUENCE queries_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.queries_id_seq OWNER TO pgadmin;
+
 
 ALTER SEQUENCE queries_id_seq OWNED BY queries.id;
 
@@ -672,7 +672,7 @@ CREATE TABLE repositories (
 );
 
 
-ALTER TABLE public.repositories OWNER TO pgadmin;
+
 
 CREATE SEQUENCE repositories_id_seq
     START WITH 1
@@ -682,7 +682,7 @@ CREATE SEQUENCE repositories_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.repositories_id_seq OWNER TO pgadmin;
+
 
 ALTER SEQUENCE repositories_id_seq OWNED BY repositories.id;
 
@@ -698,7 +698,7 @@ CREATE TABLE roles (
 );
 
 
-ALTER TABLE public.roles OWNER TO pgadmin;
+
 
 CREATE SEQUENCE roles_id_seq
     START WITH 1
@@ -708,7 +708,7 @@ CREATE SEQUENCE roles_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.roles_id_seq OWNER TO pgadmin;
+
 
 ALTER SEQUENCE roles_id_seq OWNED BY roles.id;
 
@@ -719,7 +719,7 @@ CREATE TABLE schema_migrations (
 );
 
 
-ALTER TABLE public.schema_migrations OWNER TO pgadmin;
+
 
 CREATE TABLE settings (
     id integer NOT NULL,
@@ -729,7 +729,7 @@ CREATE TABLE settings (
 );
 
 
-ALTER TABLE public.settings OWNER TO pgadmin;
+
 
 CREATE SEQUENCE settings_id_seq
     START WITH 1
@@ -739,7 +739,7 @@ CREATE SEQUENCE settings_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.settings_id_seq OWNER TO pgadmin;
+
 
 ALTER SEQUENCE settings_id_seq OWNED BY settings.id;
 
@@ -762,7 +762,7 @@ CREATE TABLE time_entries (
 );
 
 
-ALTER TABLE public.time_entries OWNER TO pgadmin;
+
 
 CREATE SEQUENCE time_entries_id_seq
     START WITH 1
@@ -772,7 +772,7 @@ CREATE SEQUENCE time_entries_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.time_entries_id_seq OWNER TO pgadmin;
+
 
 ALTER SEQUENCE time_entries_id_seq OWNED BY time_entries.id;
 
@@ -787,7 +787,7 @@ CREATE TABLE tokens (
 );
 
 
-ALTER TABLE public.tokens OWNER TO pgadmin;
+
 
 CREATE SEQUENCE tokens_id_seq
     START WITH 1
@@ -797,7 +797,7 @@ CREATE SEQUENCE tokens_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.tokens_id_seq OWNER TO pgadmin;
+
 
 ALTER SEQUENCE tokens_id_seq OWNED BY tokens.id;
 
@@ -812,7 +812,7 @@ CREATE TABLE trackers (
 );
 
 
-ALTER TABLE public.trackers OWNER TO pgadmin;
+
 
 CREATE SEQUENCE trackers_id_seq
     START WITH 1
@@ -822,7 +822,7 @@ CREATE SEQUENCE trackers_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.trackers_id_seq OWNER TO pgadmin;
+
 
 ALTER SEQUENCE trackers_id_seq OWNED BY trackers.id;
 
@@ -837,7 +837,7 @@ CREATE TABLE user_preferences (
 );
 
 
-ALTER TABLE public.user_preferences OWNER TO pgadmin;
+
 
 CREATE SEQUENCE user_preferences_id_seq
     START WITH 1
@@ -847,7 +847,7 @@ CREATE SEQUENCE user_preferences_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.user_preferences_id_seq OWNER TO pgadmin;
+
 
 ALTER SEQUENCE user_preferences_id_seq OWNED BY user_preferences.id;
 
@@ -872,7 +872,7 @@ CREATE TABLE users (
 );
 
 
-ALTER TABLE public.users OWNER TO pgadmin;
+
 
 CREATE SEQUENCE users_id_seq
     START WITH 1
@@ -882,7 +882,7 @@ CREATE SEQUENCE users_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.users_id_seq OWNER TO pgadmin;
+
 
 ALTER SEQUENCE users_id_seq OWNED BY users.id;
 
@@ -900,7 +900,7 @@ CREATE TABLE versions (
 );
 
 
-ALTER TABLE public.versions OWNER TO pgadmin;
+
 
 CREATE SEQUENCE versions_id_seq
     START WITH 1
@@ -910,7 +910,7 @@ CREATE SEQUENCE versions_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.versions_id_seq OWNER TO pgadmin;
+
 
 ALTER SEQUENCE versions_id_seq OWNED BY versions.id;
 
@@ -924,7 +924,7 @@ CREATE TABLE watchers (
 );
 
 
-ALTER TABLE public.watchers OWNER TO pgadmin;
+
 
 CREATE SEQUENCE watchers_id_seq
     START WITH 1
@@ -934,7 +934,7 @@ CREATE SEQUENCE watchers_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.watchers_id_seq OWNER TO pgadmin;
+
 
 ALTER SEQUENCE watchers_id_seq OWNED BY watchers.id;
 
@@ -953,7 +953,7 @@ CREATE TABLE wiki_content_versions (
 );
 
 
-ALTER TABLE public.wiki_content_versions OWNER TO pgadmin;
+
 
 CREATE SEQUENCE wiki_content_versions_id_seq
     START WITH 1
@@ -963,7 +963,7 @@ CREATE SEQUENCE wiki_content_versions_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.wiki_content_versions_id_seq OWNER TO pgadmin;
+
 
 ALTER SEQUENCE wiki_content_versions_id_seq OWNED BY wiki_content_versions.id;
 
@@ -980,7 +980,7 @@ CREATE TABLE wiki_contents (
 );
 
 
-ALTER TABLE public.wiki_contents OWNER TO pgadmin;
+
 
 CREATE SEQUENCE wiki_contents_id_seq
     START WITH 1
@@ -990,7 +990,7 @@ CREATE SEQUENCE wiki_contents_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.wiki_contents_id_seq OWNER TO pgadmin;
+
 
 ALTER SEQUENCE wiki_contents_id_seq OWNED BY wiki_contents.id;
 
@@ -1006,7 +1006,7 @@ CREATE TABLE wiki_pages (
 );
 
 
-ALTER TABLE public.wiki_pages OWNER TO pgadmin;
+
 
 CREATE SEQUENCE wiki_pages_id_seq
     START WITH 1
@@ -1016,7 +1016,7 @@ CREATE SEQUENCE wiki_pages_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.wiki_pages_id_seq OWNER TO pgadmin;
+
 
 ALTER SEQUENCE wiki_pages_id_seq OWNED BY wiki_pages.id;
 
@@ -1031,7 +1031,7 @@ CREATE TABLE wiki_redirects (
 );
 
 
-ALTER TABLE public.wiki_redirects OWNER TO pgadmin;
+
 
 CREATE SEQUENCE wiki_redirects_id_seq
     START WITH 1
@@ -1041,7 +1041,7 @@ CREATE SEQUENCE wiki_redirects_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.wiki_redirects_id_seq OWNER TO pgadmin;
+
 
 ALTER SEQUENCE wiki_redirects_id_seq OWNED BY wiki_redirects.id;
 
@@ -1055,7 +1055,7 @@ CREATE TABLE wikis (
 );
 
 
-ALTER TABLE public.wikis OWNER TO pgadmin;
+
 
 CREATE SEQUENCE wikis_id_seq
     START WITH 1
@@ -1065,7 +1065,7 @@ CREATE SEQUENCE wikis_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.wikis_id_seq OWNER TO pgadmin;
+
 
 ALTER SEQUENCE wikis_id_seq OWNED BY wikis.id;
 
@@ -1080,7 +1080,7 @@ CREATE TABLE workflows (
 );
 
 
-ALTER TABLE public.workflows OWNER TO pgadmin;
+
 
 CREATE SEQUENCE workflows_id_seq
     START WITH 1
@@ -1090,7 +1090,7 @@ CREATE SEQUENCE workflows_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.workflows_id_seq OWNER TO pgadmin;
+
 
 ALTER SEQUENCE workflows_id_seq OWNED BY workflows.id;
 
