@@ -79,6 +79,11 @@ class CcInstallController extends CcInstallAppController {
  */
     function database() {
         $this->pageTitle = __('Step 1: Database');
+
+        if(file_exists(APP.'Config'.DS.'database.php')) {
+            $this->redirect(array('action' => 'data'));
+        }
+
         if (!empty($this->data)) {
 			$check = false;
 
